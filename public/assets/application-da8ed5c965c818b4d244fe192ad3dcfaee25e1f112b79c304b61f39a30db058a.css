@@ -1,0 +1,502 @@
+/*
+
+
+*/
+/* line 7, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 8, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #e1e1e1;
+}
+
+/* line 9, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+body, input {
+  font-family: Arial;
+  font-size: 13pt;
+}
+
+/* line 10, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+input {
+  padding: 3px;
+  border: 1px solid #d2d2d2;
+}
+
+/* line 11, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+input[type='button'], input[type='submit'] {
+  background-color: #EEE;
+  padding: 5px;
+}
+
+/* line 12, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+input[type='file'] {
+  border: 0;
+}
+
+/* line 13, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+textarea {
+  border: 1px solid #d2d2d2;
+  width: 700px;
+  padding: 10px;
+  font-family: Arial;
+  font-size: 10pt;
+}
+
+/* line 14, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+img {
+  border: 0;
+}
+
+/* line 15, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 20pt;
+  text-transform: uppercase;
+}
+
+/* line 16, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+h3 {
+  font-size: 13pt;
+  margin-bottom: 0;
+}
+
+/* line 17, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+a {
+  color: #BA303A;
+  text-decoration: none;
+}
+
+/* line 18, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 19, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* line 20, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+th {
+  text-align: left;
+  font-size: 11pt;
+}
+
+/* line 21, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+td img {
+  padding: 0;
+}
+
+/* line 23, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#container {
+  min-height: 100%;
+  position: relative;
+}
+
+/* line 24, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#header {
+  background-color: #00274d;
+  color: #FFF;
+  border-bottom: 2px solid #083a7f;
+  min-height: 70px;
+}
+
+/* line 25, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#menu {
+  background-color: #001831;
+  border-bottom: 4px solid #BA303A;
+}
+
+/* line 26, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#content {
+  position: relative;
+  width: 1500px;
+  margin: 10px auto 0 auto;
+  padding: 15px 25px 15px 25px;
+  background-color: #FFF;
+  border-radius: 8px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #AAA;
+}
+
+/* line 27, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #001831;
+  color: #FFF;
+  border-top: 4px solid #BA303A;
+}
+
+/* line 28, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#footer_spacer {
+  height: 70px;
+}
+
+/* line 30, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#progress p span.status {
+  margin-left: 3px;
+}
+
+/* line 31, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#progress p img {
+  vertical-align: middle;
+  margin-bottom: 4px;
+}
+
+/* line 33, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.menu {
+  margin: 0;
+  padding: 10px 15px 7px 15px;
+  color: #FFF;
+}
+
+/* line 34, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.menu a, .footer a {
+  color: #FFF;
+}
+
+/* line 35, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.footer {
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+}
+
+/* line 36, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.footer a {
+  text-decoration: underline;
+}
+
+/* line 37, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.table_header td {
+  font-weight: bold;
+}
+
+/* line 38, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.even td, .odd td, th {
+  padding: 12px 7px 7px 7px;
+}
+
+/* line 39, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.even {
+  background-color: #EEE;
+}
+
+/* line 40, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.odd {
+  background-color: #FFF;
+}
+
+/* line 41, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.text_input {
+  width: 280px;
+}
+
+/* line 42, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.user_welcome {
+  float: right;
+  margin-right: 15px;
+}
+
+/* line 43, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.user_welcome a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+/* line 44, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.user_groups {
+  margin-right: 200px;
+  display: block;
+}
+
+/* line 45, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.user_groups label {
+  margin-right: 15px;
+}
+
+/* line 46, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.user_name, .user_expiration {
+  min-width: 180px;
+}
+
+/* line 47, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.user_email {
+  min-width: 370px;
+}
+
+/* line 48, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.group_name, .clipboard_item {
+  min-width: 483px;
+}
+
+/* line 49, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.file_name {
+  min-width: 250px;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+/* line 50, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.file_name a, .shared_file a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* line 51, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.file_size {
+  min-width: 100px;
+}
+
+/* line 52, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.disabled {
+  color: #999;
+}
+
+/* line 53, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.breadcrumb {
+  margin-bottom: 5px;
+  padding: 4px;
+  font-size: 11pt;
+  background-color: #F6F6F6;
+  border: 1px solid #DDD;
+  border-bottom-color: #AAA;
+  border-right-color: #CCC;
+  display: inline-block;
+}
+
+/* line 54, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* line 55, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.permission_column {
+  width: 75px;
+  text-align: center;
+}
+
+/* line 56, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.permissions_button, .back {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* line 57, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.clipboard_empty {
+  margin-top: 35px;
+}
+
+/* line 58, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.clipboard_info_image {
+  float: left;
+  margin: 3px 15px 15px 0;
+}
+
+/* line 59, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.button_to, .button_to div {
+  display: inline;
+}
+
+/* line 60, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.emails_to_share_with {
+  height: 39px;
+  width: 755px;
+}
+
+/* line 61, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.share_message {
+  height: 80px;
+  width: 755px;
+}
+
+/* line 62, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.shared_file {
+  display: inline-block;
+  min-width: 400px;
+  padding: 15px;
+  background-color: #EEE;
+}
+
+/* line 63, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.shared_file img {
+  margin-right: 8px;
+}
+
+/* line 64, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.share_link_emails {
+  font-size: 11pt;
+}
+
+/* line 65, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.comma_seperated, .optional {
+  position: relative;
+  top: -1px;
+  left: 3px;
+  font-size: 10pt;
+}
+
+/* line 66, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.char_counter {
+  float: right;
+  margin: 5px 75px 0 0;
+  font-size: 10pt;
+}
+
+/* line 67, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.translation .missing, .red {
+  color: #F00;
+}
+
+/* line 69, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.error, .notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 70, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.error {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+/* line 71, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.notice {
+  background-color: rgba(0, 165, 0, 0.7);
+}
+
+/* line 73, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.error p, .notice p {
+  display: inline-block;
+  font-size: 16pt;
+  color: #FFF;
+  margin: 0;
+  padding: 10px 0 10px 45px;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+}
+
+/* line 74, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.error p {
+  background-image: url(exclamation.png);
+}
+
+/* line 75, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.notice p {
+  background-image: url(information.png);
+}
+
+/* line 77, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+span.field_with_errors input, span.field_with_errors textarea {
+  background-color: #FDD;
+}
+
+/* line 78, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#errorExplanation {
+  width: 500px;
+  border: 2px solid #c00;
+  padding: 7px 7px 15px 7px;
+  margin: 10px 0 10px 0;
+  background-color: #f0f0f0;
+}
+
+/* line 79, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#errorExplanation p {
+  padding-left: 8px;
+}
+
+/* line 80, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#errorExplanation h2 {
+  text-align: left;
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  margin: -7px;
+  margin-bottom: 7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 81, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#errorExplanation ul {
+  margin: 0;
+}
+
+/* line 82, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#errorExplanation ul li {
+  list-style: square;
+}
+
+/* line 84, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.folder_menu, .user_menu, .group_menu {
+  padding: 7px 14px 7px 14px;
+}
+
+/* line 85, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.folder_menu a, .user_menu a, .group_menu a {
+  outline: none;
+}
+
+/* line 87, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.highlight {
+  display: inline-block;
+  margin: -7px 0 -7px 0;
+  padding-left: 14px;
+  background-color: #BA303A;
+  border-radius: 15px;
+}
+
+/* line 88, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.highlight span {
+  display: inline-block;
+  height: 27px;
+  padding: 7px 14px 0 0;
+}
+
+/* line 89, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+.highlight a {
+  text-decoration: none;
+  color: #FFF;
+  outline: none;
+}
+
+/* line 91, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#table-wrapper {
+  position: relative;
+}
+
+/* line 94, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#table-scroll {
+  height: 300px;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+/* line 99, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#table-wrapper table {
+  width: 100%;
+}
+
+/* line 103, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#table-wrapper table * {
+  background: white;
+  color: black;
+}
+
+/* line 107, c:/Users/jerrod.nelms/RubymineProjects/m1portal/app/assets/stylesheets/application.scss */
+#table-wrapper table thead th .text {
+  position: absolute;
+  top: -20px;
+  z-index: 2;
+  height: 20px;
+  width: 35%;
+  border: 1px solid red;
+}

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @surg_hosp_form_hospital.name %>
+</p>
+
+<p>
+  <strong>Surg hosp form:</strong>
+  <%= @surg_hosp_form_hospital.surg_hosp_form.name %>
+</p>
+
+<%= link_to 'Edit', edit_surg_hosp_form_hospital_path(@surg_hosp_form_hospital) %> |
+<%= link_to 'Back', surg_hosp_form_hospitals_path %>

@@ -1,0 +1,30 @@
+<%= form_for(@surg_hosp_form_doc) do |f| %>
+  <% if @surg_hosp_form_doc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@surg_hosp_form_doc.errors.count, "error") %> prohibited this surg_hosp_form_doc from being saved:</h2>
+
+      <ul>
+      <% @surg_hosp_form_doc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Provider's Name" %><br>
+    <%= f.text_field :name %>
+  </div>
+    <br>
+    <div class="control-group">
+      <%= f.label :surg_hosp_form, 'Surgery/Hospital Form', class: 'control-group' %>
+      <div class="controls">
+        <%= f.collection_select( :surg_hosp_form_id, SurgHospForm.all, :id, :name, {:prompt => "Select a Hospital"}, {:id => 'Hospital_select'} ) %>
+      </div>
+    </div>
+    <br>
+  <div class="actions">
+    <%= f.submit "Create Provider" %>
+  </div>
+    <br>
+<% end %>

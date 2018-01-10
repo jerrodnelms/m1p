@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  surg_hosp_form_id: 
+  surg_hosp_form_hospital_id: 
+  account_pat_type_id: 
+  account_pat_num: 1
+  admit_date: 2018-01-08
+  discharg_date: 2018-01-08
+  any_pertinent_conditions_string: MyString
+  omitted_conditions_tally: 1
+  dnmc_conditions_tally: 1
+  actual_conditions_tally: 1
+
+two:
+  surg_hosp_form_id: 
+  surg_hosp_form_hospital_id: 
+  account_pat_type_id: 
+  account_pat_num: 1
+  admit_date: 2018-01-08
+  discharg_date: 2018-01-08
+  any_pertinent_conditions_string: MyString
+  omitted_conditions_tally: 1
+  dnmc_conditions_tally: 1
+  actual_conditions_tally: 1

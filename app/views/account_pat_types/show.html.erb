@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @account_pat_type.name %>
+</p>
+
+<p>
+  <strong>Surg hosp form:</strong>
+  <%= @account_pat_type.surg_hosp_form.name %>
+</p>
+
+<%= link_to 'Edit', edit_account_pat_type_path(@account_pat_type) %> |
+<%= link_to 'Back', account_pat_types_path %>

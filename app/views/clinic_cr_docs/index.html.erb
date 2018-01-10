@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinic Cr Docs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic cr form</th>
+      <th>Clinic doc</th>
+      <th>Pcp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinic_cr_docs.each do |clinic_cr_doc| %>
+      <tr>
+        <td><%= clinic_cr_doc.clinic_cr_form %></td>
+        <td><%= clinic_cr_doc.clinic_doc %></td>
+        <td><%= clinic_cr_doc.pcp %></td>
+        <td><%= link_to 'Show', clinic_cr_doc %></td>
+        <td><%= link_to 'Edit', edit_clinic_cr_doc_path(clinic_cr_doc) %></td>
+        <td><%= link_to 'Destroy', clinic_cr_doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic cr doc', new_clinic_cr_doc_path %>

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surgery/Hospital Form Conditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Condition Name</th>
+      <th>Surgery/Hospital Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_form_conditions.each do |surg_hosp_form_condition| %>
+      <tr class="<%= cycle('even','odd') %>">
+        <td><%= surg_hosp_form_condition.name %></td>
+        <td><%= surg_hosp_form_condition.surg_hosp_form.name if surg_hosp_form_condition.surg_hosp_form and surg_hosp_form_condition.surg_hosp_form.name %></td>
+        <td><%= link_to 'Show', surg_hosp_form_condition %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_form_condition_path(surg_hosp_form_condition) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_form_condition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+==><%= link_to 'Click HERE to create an INDIVIDUAL condition', new_surg_hosp_form_condition_path %><==
+
+<br>
+<h3>Import Conditions</h3>
+<br>
+<p>To import multiple conditions from a .csv file:
+1) Click Choose File
+  2) Once a file is chosen, click "Import Conditions" </p>
+<br>
+<%= form_tag import_surg_hosp_form_conditions_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= button_tag "Import Conditions" %>
+<% end %>

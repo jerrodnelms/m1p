@@ -1,0 +1,11 @@
+<fieldset>
+  <p>
+    <%= f.check_box :_destroy %>
+    <%= f.label :type, "Condition Type" %>
+    <%= f.select :type, [['Omitted'], ['Misdiagnosed'], ['Accurately Captured']] %>
+    <%= f.label :name, "Condition Name" %>
+    <%= f.text_field :name %>
+    <%= f.label :detail, "Condition Detail" %>
+    <%= f.text_field :detail %>
+  </p>
+</fieldset>

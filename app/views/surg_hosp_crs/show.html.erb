@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Surgery/Hospital Form Type:</strong>
+  <%= @surg_hosp_cr.surg_hosp_form %>
+</p>
+
+<p>
+  <strong>Facility:</strong>
+  <%= @surg_hosp_cr.surg_hosp_form_hospital %>
+</p>
+
+<p>
+  <strong>Account/Patient:</strong>
+  <%= @surg_hosp_cr.account_pat_type %>
+</p>
+
+<p>
+  <strong>Account/Patient Number:</strong>
+  <%= @surg_hosp_cr.account_pat_num %>
+</p>
+
+<p>
+  <strong>Admit Date:</strong>
+  <%= @surg_hosp_cr.admit_date %>
+</p>
+
+<p>
+  <strong>Discharge Date:</strong>
+  <%= @surg_hosp_cr.discharg_date %>
+</p>
+
+<p>
+  <strong>Any pertinent conditions?:</strong>
+  <%= @surg_hosp_cr.any_pertinent_conditions_string %>
+</p>
+
+<p>
+  <strong>Omitted Conditions Tally:</strong>
+  <%= @surg_hosp_cr.omitted_conditions_tally %>
+</p>
+
+<p>
+  <strong>DNMC Conditions Tally:</strong>
+  <%= @surg_hosp_cr.dnmc_conditions_tally %>
+</p>
+
+<p>
+  <strong>Actual Conditions Tally:</strong>
+  <%= @surg_hosp_cr.actual_conditions_tally %>
+</p>
+
+<%= link_to 'Edit', edit_surg_hosp_cr_path(@surg_hosp_cr) %> |
+<%= link_to 'Back', surg_hosp_crs_path %>

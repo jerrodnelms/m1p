@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Condition Name:</strong>
+  <%= @surg_hosp_form_condition.name %>
+</p>
+
+<p>
+  <strong>Surgery/Hospital Form:</strong>
+  <%= @surg_hosp_form_condition.surg_hosp_form.name %>
+</p>
+
+<%= link_to 'Edit', edit_surg_hosp_form_condition_path(@surg_hosp_form_condition) %> |
+<%= link_to 'Back', surg_hosp_form_conditions_path %>

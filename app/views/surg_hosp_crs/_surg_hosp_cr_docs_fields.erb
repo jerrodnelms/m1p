@@ -1,0 +1,11 @@
+<p>
+  <%= f.label :name, "Provider Name" %>
+  <%= f.text_field :name %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Provider" %>
+</p>
+<br>
+<strong>For each condition recorded, please indicate the type (Omitted, Misdiagnosed, or Accurately Captured), condition name, and detail.</strong>
+<%= f.fields_for :surg_hosp_cr_conditions do |builder| %>
+  <%= render 'surg_hosp_cr_conditions_fields', :f => builder %>
+<% end %>

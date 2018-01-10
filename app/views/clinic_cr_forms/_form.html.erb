@@ -1,0 +1,62 @@
+<%= form_for(@clinic_cr_form) do |f| %>
+  <% if @clinic_cr_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clinic_cr_form.errors.count, "error") %> prohibited this clinic_cr_form from being saved:</h2>
+
+      <ul>
+        <% @clinic_cr_form.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clinic_id %><br>
+    <%= f.collection_select( :clinic_id, Clinic.order(:name), :id, :name, include_blank: true ) %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :mysis_id %><br>
+    <%= f.text_field :mysis_id %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :any_pertinent_conditions, 'Are there any pertienent conditions this calendar year? ' %><br>
+    <%= f.select :any_pertinent_conditions, [['Yes, proceed to Primary Care Physician'], ['No, take me to the end of the form']] %>
+  </div>
+  <br>
+  <strong>Instructions for completing form:</strong><br>
+  <br>
+  <em>Step 1:</em> Please check the box beside the provider name to indicate the Primary Care Provider.<br>
+
+  <p><em>Step 2:</em> For each condition recorded, please indicate the type (Omitted, Misdiagnosed, or Accurately Captured), condition name, and detail.<br>
+  <br>
+  <em>Step 3:</em> To delete a condition, please check the box beside the Condition Type.
+  <%= f.fields_for :clinic_cr_docs do |builder| %>
+    <%= render 'clinic_cr_docs_fields', :f => builder %>
+  <% end %>
+  <br>
+
+  <strong>Please tally the total conditions reported on this form.</strong><br>
+  <br>
+  <div class="field">
+    <%= f.label :actual_conditions_tally %><br>
+    <%= f.number_field :actual_conditions_tally %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :misdiagnosed_conditions_tally %><br>
+    <%= f.number_field :misdiagnosed_conditions_tally %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :captured_conditions_tally %><br>
+    <%= f.number_field :captured_conditions_tally %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Submit Form" %>
+  </div>
+  <br>
+<% end %>

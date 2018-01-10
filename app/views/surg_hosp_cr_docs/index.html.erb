@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surg Hosp Cr Docs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Surg hosp cr</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_cr_docs.each do |surg_hosp_cr_doc| %>
+      <tr>
+        <td><%= surg_hosp_cr_doc.surg_hosp_cr %></td>
+        <td><%= surg_hosp_cr_doc.name %></td>
+        <td><%= link_to 'Show', surg_hosp_cr_doc %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_cr_doc_path(surg_hosp_cr_doc) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_cr_doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Surg hosp cr doc', new_surg_hosp_cr_doc_path %>

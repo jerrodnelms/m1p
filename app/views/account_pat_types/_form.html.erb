@@ -1,0 +1,25 @@
+<%= form_for(@account_pat_type) do |f| %>
+  <% if @account_pat_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@account_pat_type.errors.count, "error") %> prohibited this account_pat_type from being saved:</h2>
+
+      <ul>
+      <% @account_pat_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, 'Account or Patient?' %><br>
+    <%= f.select :name, [['Account'], ['Patient']] %>
+  </div>
+  <div class="field">
+    <%= f.label :surg_hosp_form, 'Surgery/Hospital Form' %><br>
+    <%= f.collection_select( :surg_hosp_form_id, SurgHospForm.order(:name), :id, :name, include_blank: true ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surgery/Hospital Form Providers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Providers</th>
+      <th>Surgery/Hospital Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_form_docs.each do |surg_hosp_form_doc| %>
+      <tr class="<%= cycle('even','odd') %>">
+        <td><%= surg_hosp_form_doc.name %></td>
+        <td><%= surg_hosp_form_doc.surg_hosp_form.name if surg_hosp_form_doc.surg_hosp_form and surg_hosp_form_doc.surg_hosp_form.name %></td>
+        <td><%= link_to 'Show', surg_hosp_form_doc %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_form_doc_path(surg_hosp_form_doc) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_form_doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+==><%= link_to 'Click HERE to create an INDIVIDUAL doctors', new_surg_hosp_form_doc_path %><==
+
+<br>
+<h3>Import Doctors</h3>
+<br>
+<p>To import multiple doctors from a .csv file:
+  1) Click Choose File
+  2) Once a file is chosen, click "Import Doctors" </p>
+<br>
+<%= form_tag import_surg_hosp_form_docs_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= button_tag "Import Doctors" %>
+<% end %>
+
+

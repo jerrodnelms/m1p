@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surg Hosp Form Hospitals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surg hosp form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_form_hospitals.each do |surg_hosp_form_hospital| %>
+      <tr>
+        <td><%= surg_hosp_form_hospital.name %></td>
+        <td><%= surg_hosp_form_hospital.surg_hosp_form.name if surg_hosp_form_hospital.surg_hosp_form and surg_hosp_form_hospital.surg_hosp_form.name %></td>
+        <td><%= link_to 'Show', surg_hosp_form_hospital %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_form_hospital_path(surg_hosp_form_hospital) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_form_hospital, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Surg hosp form hospital', new_surg_hosp_form_hospital_path %>
+
+<br>
+<h3>Import Hospitals</h3>
+<%= form_tag import_surg_hosp_form_hospitals_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import Hospitals" %>
+<% end %>

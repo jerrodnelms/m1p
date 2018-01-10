@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Submitted Surgery/Hospital Chart Review Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Surgery/Hospital Form Type</th>
+      <th>Hospital or Facility</th>
+      <th>Account/Patient</th>
+      <th>Account/Patient Number</th>
+      <th>Admit Date</th>
+      <th>Discharge Date</th>
+      <th>Any pertinent conditions</th>
+      <th>Omitted Conditions Tally</th>
+      <th>DNMC Conditions Tally</th>
+      <th>Actual Conditions Tally</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_crs.each do |surg_hosp_cr| %>
+      <tr>
+        <td><%= surg_hosp_cr.surg_hosp_form %></td>
+        <td><%= surg_hosp_cr.surg_hosp_form_hospital %></td>
+        <td><%= surg_hosp_cr.account_pat_type %></td>
+        <td><%= surg_hosp_cr.account_pat_num %></td>
+        <td><%= surg_hosp_cr.admit_date %></td>
+        <td><%= surg_hosp_cr.discharg_date %></td>
+        <td><%= surg_hosp_cr.any_pertinent_conditions_string %></td>
+        <td><%= surg_hosp_cr.omitted_conditions_tally %></td>
+        <td><%= surg_hosp_cr.dnmc_conditions_tally %></td>
+        <td><%= surg_hosp_cr.actual_conditions_tally %></td>
+        <td><%= link_to 'Show', surg_hosp_cr %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_cr_path(surg_hosp_cr) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_cr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Click Here to Submit a new Surgery/Hospital Form', new_surg_hosp_cr_path %>

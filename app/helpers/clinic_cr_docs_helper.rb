@@ -1,0 +1,2 @@
+module ClinicCrDocsHelper
+end

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Clinic Conditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Clinic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @clinic_conditions.each do |clinic_condition| %>
+    <tr>
+      <td><%= clinic_condition.name %></td>
+      <td><%= clinic_condition.clinic.name if clinic_condition.clinic and clinic_condition.clinic.name %></td>
+      <td><%= link_to 'Show', clinic_condition %></td>
+      <td><%= link_to 'Edit', edit_clinic_condition_path(clinic_condition) %></td>
+      <td><%= link_to 'Destroy', clinic_condition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clinic condition', new_clinic_condition_path %>
+
+<h3>Import Clinic Conditions</h3>
+<br>
+<%= form_tag import_clinic_conditions_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import Clinic Conditions" %>
+<% end %>

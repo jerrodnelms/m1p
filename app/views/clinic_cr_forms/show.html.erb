@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @clinic_cr_form.clinic %>
+</p>
+
+<p>
+  <strong>Mysis ID:</strong>
+  <%= @clinic_cr_form.mysis_id %>
+</p>
+
+<p>
+  <strong>Any pertinent conditions?:</strong>
+  <%= @clinic_cr_form.any_pertinent_conditions %>
+</p>
+
+<p>
+  <strong>Actual Conditions Tally:</strong>
+  <%= @clinic_cr_form.actual_conditions_tally %>
+</p>
+
+<p>
+  <strong>Misdiagnosed Conditions Tally:</strong>
+  <%= @clinic_cr_form.misdiagnosed_conditions_tally %>
+</p>
+
+<p>
+  <strong>Captured Conditions Tally:</strong>
+  <%= @clinic_cr_form.captured_conditions_tally %>
+</p>
+
+<%= link_to 'Edit', edit_clinic_cr_form_path(@clinic_cr_form) %> |
+<%= link_to 'Back', clinic_cr_forms_path %>

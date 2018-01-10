@@ -1,0 +1,23 @@
+I"ë(function() {
+  jQuery(function() {
+    var clinicdocs;
+    clinicdocs = $('#clinic_cr_form_clinic_doc_id').html();
+    $('#clinic_cr_form_clinic_id').change(function() {
+      var clinic, options;
+      clinic = $('#clinic_cr_form_clinic_id :selected').text();
+      options = $(clinicdocs).filter("optgroup[label='" + clinic + "']").html();
+      if (options) {
+        return $('#clinic_cr_form_clinic_doc_id').html(options);
+      } else {
+        return $('#clinic_cr_form_clinic_doc_id').empty();
+      }
+    });
+    return $('form').on('click', 'remove_fields', function(event) {
+      $(this).prev('input[type=hidden]').val('1');
+      $(this).closest('fieldset').hide();
+      return event.preventDefault();
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing SUBMITTED Clinic Chart Review Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>Mysis ID</th>
+      <th>Any pertinent conditions?</th>
+      <th>Actual Conditions tally</th>
+      <th>Misdiagnosed Conditions tally</th>
+      <th>Captured Conditions tally</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clinic_cr_forms.each do |clinic_cr_form| %>
+      <tr>
+        <td><%= clinic_cr_form.clinic %></td>
+        <td><%= clinic_cr_form.mysis_id %></td>
+        <td><%= clinic_cr_form.any_pertinent_conditions %></td>
+        <td><%= clinic_cr_form.actual_conditions_tally %></td>
+        <td><%= clinic_cr_form.misdiagnosed_conditions_tally %></td>
+        <td><%= clinic_cr_form.captured_conditions_tally %></td>
+        <td><%= link_to 'Show', clinic_cr_form %></td>
+        <td><%= link_to 'Edit', edit_clinic_cr_form_path(clinic_cr_form) %></td>
+        <td><%= link_to 'Destroy', clinic_cr_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Click here to submit a NEW Clinic Chart Review Form', new_clinic_cr_form_path %>

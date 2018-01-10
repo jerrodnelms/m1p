@@ -1,0 +1,74 @@
+<%= form_for(@surg_hosp_cr) do |f| %>
+  <% if @surg_hosp_cr.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@surg_hosp_cr.errors.count, "error") %> prohibited this surg_hosp_cr from being saved:</h2>
+
+      <ul>
+      <% @surg_hosp_cr.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :surg_hosp_form, 'Surgery/Hospital Form' %><br>
+    <%= f.collection_select( :surg_hosp_form_id, SurgHospForm.order(:name), :id, :name, include_blank: true ) %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :surg_hosp_form_hospital_id, 'Hospital/Facility' %><br>
+    <%= f.grouped_collection_select :surg_hosp_form_hospital_id, SurgHospForm.order(:name), :surg_hosp_form_hospitals, :name, :id, :name, include_blank: true  %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :account_pat_num, 'Account/Patient Number'%><br>
+    <%= f.number_field :account_pat_num %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :account_pat_type_id, 'Is this an Account or Patient?' %><br>
+    <%= f.grouped_collection_select :account_pat_type_id, SurgHospForm.order(:name), :account_pat_types, :name, :id, :name, include_blank: true  %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :admit_date, 'Admit Date' %><br>
+    <%= f.date_select :admit_date %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :discharg_date, 'Discharge Date' %><br>
+    <%= f.date_select :discharg_date %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :any_pertinent_conditions_string, 'Are there any pertinent conditions in this patient stay?' %><br>
+    <%= f.select :any_pertinent_conditions_string, [['Yes, take me to the Providers Section'], ['No, take me to the end of the form']]  %>
+  </div>
+  <strong>Please check the box beside the provider name to indicate the Primary Care Provider.</strong>
+  <%= f.fields_for :surg_hosp_cr_docs do |builder| %>
+    <%= render 'surg_hosp_cr_docs_fields', :f => builder %>
+  <% end %>
+  <br>
+
+  <br>
+  <div class="field">
+    <%= f.label :omitted_conditions_tally, 'Omitted Conditions Tally' %><br>
+    <%= f.number_field :omitted_conditions_tally %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :dnmc_conditions_tally, 'DNMC Conditions Tally' %><br>
+    <%= f.number_field :dnmc_conditions_tally %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :actual_conditions_tally, 'Accurately Captured Conditions Tally' %><br>
+    <%= f.number_field :actual_conditions_tally %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= f.submit "Submit Form" %>
+  </div>
+  <br>
+<% end %>

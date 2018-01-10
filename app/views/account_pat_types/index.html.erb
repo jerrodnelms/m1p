@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Account Pat Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Account/Patient Type</th>
+      <th>Surgery/Hospital Form</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account_pat_types.each do |account_pat_type| %>
+      <tr>
+        <td><%= account_pat_type.name %></td>
+        <td><%= account_pat_type.surg_hosp_form.name if account_pat_type.surg_hosp_form and account_pat_type.surg_hosp_form.name %></td>
+        <td><%= link_to 'Show', account_pat_type %></td>
+        <td><%= link_to 'Edit', edit_account_pat_type_path(account_pat_type) %></td>
+        <td><%= link_to 'Destroy', account_pat_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Click on this link to create a new Account/Patient Type', new_account_pat_type_path %><br>
+Note: This will rarely happen and is reserved only for Admins.

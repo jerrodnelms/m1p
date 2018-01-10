@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surgery/Hospital Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Surgery or Hospital Form Type:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_forms.each do |surg_hosp_form| %>
+      <tr>
+        <td><%= surg_hosp_form.name %></td>
+        <td><%= link_to 'Show', surg_hosp_form %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_form_path(surg_hosp_form) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+==> <%= link_to 'Click HERE to create an INDIVIDUAL Surgery/Hospital Form', new_surg_hosp_form_path %> <==

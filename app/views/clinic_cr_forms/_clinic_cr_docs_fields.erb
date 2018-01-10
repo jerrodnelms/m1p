@@ -1,0 +1,15 @@
+<br>
+<fieldset>
+  <p> <%= f.label :clinic_doc_id, 'Provider' %><br>
+    <%= f.grouped_collection_select :clinic_doc_id, Clinic.order(:name), :clinic_docs, :name, :id, :name, include_blank: true  %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Provider" %><br>
+  <p>
+  <%= f.fields_for :clinic_cr_conditions do |builder| %>
+    <%= render 'clinic_cr_conditions_fields', :f => builder %>
+  <% end %>
+  <br>
+</fieldset>
+<br>
+
+

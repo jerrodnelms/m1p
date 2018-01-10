@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surg Hosp Cr Conditions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Surg hosp cr doc</th>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Detail</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surg_hosp_cr_conditions.each do |surg_hosp_cr_condition| %>
+      <tr>
+        <td><%= surg_hosp_cr_condition.surg_hosp_cr_doc %></td>
+        <td><%= surg_hosp_cr_condition.type %></td>
+        <td><%= surg_hosp_cr_condition.name %></td>
+        <td><%= surg_hosp_cr_condition.detail %></td>
+        <td><%= link_to 'Show', surg_hosp_cr_condition %></td>
+        <td><%= link_to 'Edit', edit_surg_hosp_cr_condition_path(surg_hosp_cr_condition) %></td>
+        <td><%= link_to 'Destroy', surg_hosp_cr_condition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Surg hosp cr condition', new_surg_hosp_cr_condition_path %>

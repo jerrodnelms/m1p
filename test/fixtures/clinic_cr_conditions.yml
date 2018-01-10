@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clinic_cr_doc_id: 
+  type: 
+  clinic_condition_id: 
+  detail: MyString
+
+two:
+  clinic_cr_doc_id: 
+  type: 
+  clinic_condition_id: 
+  detail: MyString

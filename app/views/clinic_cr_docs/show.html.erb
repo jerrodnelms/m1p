@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinic cr form:</strong>
+  <%= @clinic_cr_doc.clinic_cr_form %>
+</p>
+
+<p>
+  <strong>Clinic doc:</strong>
+  <%= @clinic_cr_doc.clinic_doc %>
+</p>
+
+<p>
+  <strong>Pcp:</strong>
+  <%= @clinic_cr_doc.pcp %>
+</p>
+
+<%= link_to 'Edit', edit_clinic_cr_doc_path(@clinic_cr_doc) %> |
+<%= link_to 'Back', clinic_cr_docs_path %>

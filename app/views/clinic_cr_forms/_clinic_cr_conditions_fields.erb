@@ -1,0 +1,17 @@
+<fieldset>
+  <p>
+  <%= f.label :type, "Is this condition Omitted, Misdiagnosed, or Accurately Captured?" %>
+  <%= f.select :type, [['Omitted'], ['Misdiagnosed'], ['Accurately Captured']] %><br>
+  <br>
+  <%= f.label :clinic_condition_id, 'Condition' %>
+  <%= f.collection_select( :clinic_condition_id, ClinicCondition.all, :id, :name, :style => "width:50px") %><br>
+  <br>
+  <%= f.label :detail, "Condition Detail" %>
+  <%= f.text_field :detail %><br>
+  <br>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "Remove Condition", '#', class: "remove_fields" %>
+  <br>
+  </p>
+</fieldset>
+

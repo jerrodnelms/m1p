@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  surg_hosp_cr_doc_id: 
+  type: 
+  name: MyString
+  detail: MyString
+
+two:
+  surg_hosp_cr_doc_id: 
+  type: 
+  name: MyString
+  detail: MyString
